@@ -1,0 +1,12 @@
+.display-container {
+    display: flex;
+    width: 66.5%;
+    margin-left: 15%;
+    background-color: rgb(255, 255, 255);
+    margin-top: -20px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    border-radius: 14px;
+    padding-left: 41px;
+    padding-right: 41px;
+  }

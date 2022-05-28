@@ -1,13 +1,12 @@
+import Card from "./Card";
+import './DisplayComponent.css';
 function DisplayComponent(props){
-    //console.log(props.gifs);
     return (
-        <div className="gifClass">
-          {props.gifs.map((item) => {
-            return (
-                <h3>{item.username}</h3>
-            );
-          })}
-        </div>
+        <div className="display-container">
+        {props.gifs.map((img) => {
+          return <Card key={img.id} image={img} />;
+        })}
+      </div>
       );
 }
 export default DisplayComponent;

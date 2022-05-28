@@ -1,15 +1,22 @@
 import React, { useRef } from "react";
+import { BiSearchAlt2 } from "react-icons/bi";
 import "./SearchBar.css";
 function SearchBar(props) {
-  const searchedItem = useRef();
+  const searchedItem = useRef(); //reference
+
+  //handling form submission
   function onSearchHandler(event) {
     event.preventDefault();
     props.setSearch(searchedItem.current.value);
-    searchedItem.current.value="";
   }
+
+  //JSX
   return (
     <div className="container">
       <form className="formClass" onSubmit={onSearchHandler}>
+      <div className="icon-container">
+        <BiSearchAlt2 className="icon" />
+        </div>
         <input
           ref={searchedItem}
           type="text"
