@@ -1,8 +1,8 @@
-import DisplayComponent from "./components/DisplayComponent";
-import SearchBar from "./components/SearchBar";
+import DisplayComponent from "./components/display-images/DisplayComponent";
+import SearchBar from "./components/search-bar/SearchBar";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Pagination from "./components/Pagination";
+import Pagination from "./components/pagination/Pagination";
 function App() {
   //state-management
 
