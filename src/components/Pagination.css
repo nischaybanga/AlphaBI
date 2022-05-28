@@ -1,0 +1,23 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10%;
+  }
+  
+  .pagination > li {
+    list-style: none;
+    padding: 2px;
+  }
+  
+  .pagination > li > a {
+    padding: 10px;
+    color: black !important;
+    text-decoration: none;
+  }
+  
+  .pagination > li > a:hover {
+    background-color: rgba(224, 110, 110, 0.4);
+    transition: background-color 0.4s ease-in, border-bottom 0.3s ease-out;
+    border-bottom: 4px solid rgb(224, 110, 110);
+  }
