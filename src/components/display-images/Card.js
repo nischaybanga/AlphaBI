@@ -1,7 +1,6 @@
 import React from "react";
 import "./Card.css";
 
-
 const defaultImage = [
   "https://media0.giphy.com/channel_assets/southparkgifs/Yxjwn4anI9bQ.jpg",
   "https://media2.giphy.com/avatars/docpop/Au3o7YNhWaLj.gif",

@@ -1,0 +1,13 @@
+.loader-class {
+  display: flex;
+  width: 36%;
+  margin-left: 15%;
+  background-color: rgb(255, 255, 255);
+  margin-top: -20px;
+  margin-bottom: 25px;
+  padding-bottom: 50px;
+  border-radius: 14px;
+  padding-left: 33%;
+  padding-right: 41px;
+  padding-top: 100px;
+}

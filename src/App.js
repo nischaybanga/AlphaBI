@@ -3,6 +3,7 @@ import SearchBar from "./components/search-bar/SearchBar";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Pagination from "./components/pagination/Pagination";
+import Loader from "./components/loader/Loader";
 function App() {
   //state-management
 
@@ -28,9 +29,8 @@ function App() {
   //search handling, if search is empty, returns hot posts again
 
   async function onSearchHandler(searchedItem) {
-    if(searchedItem.trim()=="")
-    {
-      searchedItem="hot";
+    if (searchedItem.trim() == "") {
+      searchedItem = "hot";
     }
     setIsLoading(true);
     const response = await axios.get(
@@ -40,7 +40,6 @@ function App() {
     setIsLoading(false);
   }
 
-
   //change of page number
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -49,14 +48,14 @@ function App() {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = gifArray.slice(indexOfFirstPost, indexOfLastPost);
-  
+
   //JSX
-  
+
   return (
     <div className="App">
       <SearchBar setSearch={onSearchHandler}></SearchBar>
       {!isLoading && <DisplayComponent gifs={currentPosts}></DisplayComponent>}
-      {isLoading && <h1>loading</h1>}
+      {isLoading && <Loader />}
       <Pagination
         postsPerPage={postsPerPage}
         totalPosts={gifArray.length}
